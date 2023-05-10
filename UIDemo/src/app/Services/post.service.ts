@@ -11,7 +11,7 @@ import { Count } from '../Models/count';
 export class PostService {
 
   private JsonPlaceholder = 'https://jsonplaceholder.typicode.com';
-  private helloapp = 'http://localhost:7069';
+  private helloapp = 'http://localhost:7262';
 
   constructor(private http: HttpClient) { }
 
