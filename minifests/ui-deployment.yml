@@ -1,0 +1,31 @@
+# image
+# what kind of resource
+# # of replicas
+# resources
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ui
+spec:
+  selector:
+    matchLabels:
+      app: ui
+  template:
+    metadata:
+      labels:
+        app: ui
+    spec:
+      containers:
+      - name: ui
+        image: hawkinsr/uidemo:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "100m" #0.1cpu
+          requests:
+            cpu: "50m"
+            memory: "64Mi"
+        ports:
+        - containerPort: 80
